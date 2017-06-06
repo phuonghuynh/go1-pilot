@@ -1,6 +1,10 @@
-# README #
+# Go1 Pilot
 
-This test project uses ES6 with webpack bundler. Supporting ESLint & Code Coverage.
+[![Build Status](http://img.shields.io/travis/phuonghuynh/go1-pilot.svg?style=flat-square)](https://travis-ci.org/phuonghuynh/go1-pilot)
+[![License](http://img.shields.io/:license-apache-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+
+This test project uses ES6 with webpack bundle. Supporting ESLint & Code Coverage.
 
 ## Prerequisites
 * Node.js
