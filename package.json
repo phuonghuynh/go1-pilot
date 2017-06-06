@@ -1,0 +1,32 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "go1-pilot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://leovo2708@bitbucket.org/phuonghqh/go1-pilot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/phuonghqh/go1-pilot#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-loader": "^1.7.1",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "jasmine-core": "^2.6.2",
+    "jasmine-spec-reporter": "^4.1.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-coverage-istanbul-reporter": "^1.3.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.3",
+    "source-map-loader": "^0.2.1",
+    "webpack": "^2.6.1"
+  }
+}
