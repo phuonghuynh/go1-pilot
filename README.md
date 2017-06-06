@@ -2,7 +2,7 @@
 
 [![Build Status](http://img.shields.io/travis/phuonghuynh/go1-pilot.svg?style=flat-square)](https://travis-ci.org/phuonghuynh/go1-pilot)
 [![Code Climate](http://img.shields.io/codeclimate/github/phuonghuynh/go1-pilot.svg?style=flat-square)](https://codeclimate.com/github/phuonghuynh/go1-pilot)
-[![Test Coverage](https://img.shields.io/codeclimate/coverage/phuonghuynh/go1-pilot.svg?style=flat-square)](https://codeclimate.com/github/codeclimate/codeclimate/coverage)
+[![Test Coverage](https://codeclimate.com/github/codeclimate/codeclimate/badges/coverage.svg)](https://codeclimate.com/github/codeclimate/codeclimate/coverage)
 [![License](http://img.shields.io/:license-apache-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
