@@ -21,7 +21,8 @@ const webpackConfig = {
             }]
         }, {
             test: /\.js$/,
-            exclude: /(node_modules|\.spec\.js$)/,
+            include: path.resolve('src/'),
+            exclude: /\.spec\.js/,
             loader: 'istanbul-instrumenter-loader',
             enforce: 'post',
             options: {
@@ -44,16 +45,13 @@ module.exports = function (config) {
             require('karma-coverage-istanbul-reporter')
         ],
         client: {
-            clearContext: false // leave Jasmine Spec Runner output visible in browser
+            clearContext: false
         },
         files: [
-            'node_modules/es6-shim/es6-shim.js',
-            './src/**/*.js',
-            './test/**/*.js'
+            { pattern: './karma-test-shim.js', watched: false }
         ],
         preprocessors: {
-            './src/**/*.js': ['webpack', 'sourcemap'],
-            './test/**/*.js': ['webpack', 'sourcemap'],
+            './karma-test-shim.js': ['webpack', 'sourcemap']
         },
         webpack: webpackConfig,
         coverageIstanbulReporter: {

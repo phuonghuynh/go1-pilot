@@ -14,7 +14,7 @@ describe('string calculator', () => {
     });
 
     it('should throw error if input has invalid number', () => {
-        let errorMessage = 'Input is invalid';
+        const errorMessage = 'Input is invalid';
         expect(() => add('a')).toThrowError(errorMessage);
         expect(() => add('1,a')).toThrowError(errorMessage);
         expect(() => add('1,,2')).toThrowError(errorMessage);

@@ -1,5 +1,5 @@
-let defaultDelimiter = ',';
-let invalidSeparatorLineFormatError = new Error('Invalid separator line format');
+const defaultDelimiter = ',';
+const invalidSeparatorLineFormatError = new Error('Invalid separator line format');
 
 function splitWithDelimiters(numbers, delimiters) {
     let words = [numbers];
@@ -15,8 +15,8 @@ function splitWithDelimiters(numbers, delimiters) {
 
 function addWithDelimiters(numbers, delimiters) {
     let sum = 0;
-    let words = splitWithDelimiters(numbers, delimiters);
-    let negativeNumbers = [];
+    const words = splitWithDelimiters(numbers, delimiters);
+    const negativeNumbers = [];
     words.forEach(word => {
         let number = parseInt(word);
         if (isNaN(number)) {
@@ -41,26 +41,26 @@ function addWithDelimiters(numbers, delimiters) {
 }
 
 function parseSeparatorLine(numbers) {
-    let index = numbers.indexOf('\n');
+    const index = numbers.indexOf('\n');
     if (index === -1) {
         throw invalidSeparatorLineFormatError;
     }
 
-    let separatorLine = numbers.substring(0, index + 1);
+    const separatorLine = numbers.substring(0, index + 1);
     return separatorLine;
 }
 
 function parseDifferentDelimiters(separatorLine) {
-    let delimiterLine = separatorLine.substring('//'.length, separatorLine.length - 1);
+    const delimiterLine = separatorLine.substring('//'.length, separatorLine.length - 1);
     if (delimiterLine.length === 0) {
         throw invalidSeparatorLineFormatError;
     } else if (delimiterLine.length === 1) {
         return [delimiterLine];
     } else {
-        let isMultipleDelimiters = delimiterLine[0] === '[' &&
+        const isMultipleDelimiters = delimiterLine[0] === '[' &&
             delimiterLine[delimiterLine.length - 1] === ']';
         if (isMultipleDelimiters) {
-            let delimiters = delimiterLine.substring(1, delimiterLine.length - 1);
+            const delimiters = delimiterLine.substring(1, delimiterLine.length - 1);
             if (delimiters.length === 0) {
                 throw invalidSeparatorLineFormatError;
             } else {
@@ -73,8 +73,8 @@ function parseDifferentDelimiters(separatorLine) {
 }
 
 function parseMultipleDelimiters(delimiterLine) {
-    let length = delimiterLine.length;
-    let delimiters = [];
+    const length = delimiterLine.length;
+    const delimiters = [];
     let startIndex = 0;
     let endIndex = 0;
     do {
@@ -84,7 +84,7 @@ function parseMultipleDelimiters(delimiterLine) {
         }
 
         endIndex = delimiterLine.indexOf(']', startIndex);
-        let delimiter = delimiterLine.substring(startIndex + 1, endIndex);
+        const delimiter = delimiterLine.substring(startIndex + 1, endIndex);
         delimiters.push(delimiter);
     } while (endIndex !== length - 1);
 
@@ -97,9 +97,9 @@ function add(numbers) {
     }
 
     let delimiters = [defaultDelimiter];
-    let isDifferentDelimiters = numbers.startsWith('//');
+    const isDifferentDelimiters = numbers.startsWith('//');
     if (isDifferentDelimiters) {
-        let separatorLine = parseSeparatorLine(numbers);
+        const separatorLine = parseSeparatorLine(numbers);
         delimiters = parseDifferentDelimiters(separatorLine);
         numbers = numbers.substring(separatorLine.length);
     }
