@@ -9,26 +9,7 @@
 This project uses ES6 with webpack bundle. Supporting ESLint & Code Coverage.
 
 ## Prerequisites
-* Node.js
-* Node Package Manager
-
-## Structure:
-
-```
-project
-│   .eslintrc.json      // ESLint rules
-│   .gitignore          // Git ignore
-│   karma.conf.js       // Karma task runner
-│   package-lock.json   // NPM package caching
-│   package.json        // NPM packages
-│   README.md           // Document
-│
-└───src
-│   │   app.js          // Main file
-│   
-└───test
-    │   app.spec.js     // Unit test for app.js
-```
+* Assume that NodeJS v4+ is installed and NPM is ready.
 
 ## Installation
 Install NodeJS packages:
