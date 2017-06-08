@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://leovo2708@bitbucket.org/phuonghqh/go1-pilot.git"
+    "url": "https://github.com/phuonghuynh/go1-pilot.git"
   },
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/phuonghqh/go1-pilot#readme",
+  "author": "Phuong Huynh",
+  "license": "Apache 2",
+  "homepage": "https://github.com/phuonghuynh/go1-pilot.git#readme",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
